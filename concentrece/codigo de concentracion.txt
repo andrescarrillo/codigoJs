@@ -1,0 +1,161 @@
+<<html>
+	<head><title>concentrese</title>
+		<script lenguaje "javascript">
+			vectorImagen = new array (65);       //65 posiciones que hay en el juego
+			var valor1=0;
+			var valor2=0;
+			var turno=0;                         //para saber cunado se da el primer y segundo click
+
+		function CargarAleatorio(){                  //se cargan las imagenes de 0 a 32 segun el nobre de la imagen en este caso imagen.JPG 
+			var datos= "";
+			for (var i=0;i<33;i++){
+			vectorImagen[i]=i+"imagen.JPG";
+			}
+			var K=1;
+ 			for(var i=33;i<65;i++)
+			   {
+				vectorImagen[i]=+"imagen.JPG";
+				k++;
+			   }
+			var=aux="";
+			for (var i=1;i<65;i++){
+					var aleatorio = math.round(math.randon()*63)+1:
+				aux=vectorImagen[i];
+				vectorImagen[i]=vectorImagen[aleatorio];
+				vectorImagen[aleatorio]=aux
+			}
+			for(var i=1;i<65;i++){                                            // se cargan las imagenes
+				documen.getElementById(i+"a").scr="imagenes/0.JPG";
+
+			}
+		function limpiar (){
+			for (var i=1;i<65;i++){
+				document.getElementById(i+"a").scr="imagenes/0.JPG";
+			}
+		}
+		function evento (valor){                                                   //para saber que la imagen se carga en los click
+			if(turno ==0){
+				valor1=valor;
+				turno=1;//para realizar cambio
+			document.getElementById(valor1+"a").scr="imagenes/"+vectorImagenes[valor1]; //aca se carga la imagen del vector en el valor 1 (primer click)
+			}else{
+			 valor2=valor;
+			 turno=0//para realizar cambio
+			 document.getElementById(valor2+"a").scr="imagenes/"+vectorImagenes[valor2];//aca se carga el valor 2 de la imagen (segundo click)
+     			     
+				if(vectorImagen[valor1]==vectorImagen[valor2])                          //si son iguales no hace nada 
+				{
+				  }else{
+					alert("diferentes");
+					document.getElementById(valor1+"a").scr="imagenes/0-JPG";     // si son diferentes oculta las imagenes
+					document.getElementById(valor2+"a").scr="imagenes/0.JPG";
+					}
+			 }
+			
+		}
+</script>
+</head>
+<body>
+     <form>
+	oprima el boton de caar <br>
+	luego el boton limpiary juege<br>
+
+	<input type="button" value="cargar" onclick="CargarAleatorio();"/>
+	<input type="button" value="limpiar" onclick="limpiar();"/>
+
+     <table border="1">
+	
+	<tr>
+	    <td><img src=imagenes/0.JPG id="1a" alt="0" onclick="evento("1")"/></td>
+	    <td><img src=imagenes/0.JPG id="2a" alt="0" onclick="evento("2")"/></td>
+	    <td><img src=imagenes/0.JPG id="3a" alt="0" onclick="evento("3")"/></td>
+	    <td><img src=imagenes/0.JPG id="4a" alt="0" onclick="evento("4")"/></td>
+	    <td><img src=imagenes/0.JPG id="5a" alt="0" onclick="evento("5")"/></td>
+	    <td><img src=imagenes/0.JPG id="6a" alt="0" onclick="evento("6")"/></td>
+	    <td><img src=imagenes/0.JPG id="7a" alt="0" onclick="evento("7")"/></td>
+	    <td><img src=imagenes/0.JPG id="8a" alt="0" onclick="evento("8")"/></td>
+	</tr>
+	<tr>
+	    <td><img src=imagenes/0.JPG id="9a" alt="0" onclick="evento("9")"/></td>
+	    <td><img src=imagenes/0.JPG id="10a" alt="0" onclick="evento("10")"/></td>
+	    <td><img src=imagenes/0.JPG id="11a" alt="0" onclick="evento("11")"/></td>
+	    <td><img src=imagenes/0.JPG id="12a" alt="0" onclick="evento("12")"/></td>
+	    <td><img src=imagenes/0.JPG id="13a" alt="0" onclick="evento("13")"/></td>
+	    <td><img src=imagenes/0.JPG id="14a" alt="0" onclick="evento("14")"/></td>
+	    <td><img src=imagenes/0.JPG id="15a" alt="0" onclick="evento("15")"/></td>
+	    <td><img src=imagenes/0.JPG id="16a" alt="0" onclick="evento("16")"/></td>
+	</tr>
+	<tr>
+	    <td><img src=imagenes/0.JPG id="17a" alt="0" onclick="evento("17")"/></td>
+	    <td><img src=imagenes/0.JPG id="18a" alt="0" onclick="evento("18")"/></td>
+	    <td><img src=imagenes/0.JPG id="19a" alt="0" onclick="evento("19")"/></td>
+	    <td><img src=imagenes/0.JPG id="20a" alt="0" onclick="evento("20")"/></td>
+	    <td><img src=imagenes/0.JPG id="21a" alt="0" onclick="evento("21")"/></td>
+	    <td><img src=imagenes/0.JPG id="22a" alt="0" onclick="evento("22")"/></td>
+	    <td><img src=imagenes/0.JPG id="23a" alt="0" onclick="evento("23")"/></td>
+	    <td><img src=imagenes/0.JPG id="24a" alt="0" onclick="evento("24")"/></td>
+	</tr>
+	<tr>
+	    <td><img src=imagenes/0.JPG id="25a" alt="0" onclick="evento("25")"/></td>
+	    <td><img src=imagenes/0.JPG id="26a" alt="0" onclick="evento("26")"/></td>
+	    <td><img src=imagenes/0.JPG id="27a" alt="0" onclick="evento("27")"/></td>
+	    <td><img src=imagenes/0.JPG id="28a" alt="0" onclick="evento("28")"/></td>
+	    <td><img src=imagenes/0.JPG id="29a" alt="0" onclick="evento("29")"/></td>
+	    <td><img src=imagenes/0.JPG id="30a" alt="0" onclick="evento("30")"/></td>
+	    <td><img src=imagenes/0.JPG id="31a" alt="0" onclick="evento("31")"/></td>
+	    <td><img src=imagenes/0.JPG id="32a" alt="0" onclick="evento("32")"/></td>
+	</tr>
+	<tr>
+	    <td><img src=imagenes/0.JPG id="33a" alt="0" onclick="evento("33")"/></td>
+	    <td><img src=imagenes/0.JPG id="34a" alt="0" onclick="evento("34")"/></td>
+	    <td><img src=imagenes/0.JPG id="35a" alt="0" onclick="evento("35")"/></td>
+	    <td><img src=imagenes/0.JPG id="36a" alt="0" onclick="evento("36")"/></td>
+	    <td><img src=imagenes/0.JPG id="37a" alt="0" onclick="evento("37")"/></td>
+	    <td><img src=imagenes/0.JPG id="38a" alt="0" onclick="evento("38")"/></td>
+	    <td><img src=imagenes/0.JPG id="39a" alt="0" onclick="evento("39")"/></td>
+	    <td><img src=imagenes/0.JPG id="40a" alt="0" onclick="evento("40")"/></td>
+	</tr>
+	<tr>
+	    <td><img src=imagenes/0.JPG id="41a" alt="0" onclick="evento("41")"/></td>
+	    <td><img src=imagenes/0.JPG id="42a" alt="0" onclick="evento("42")"/></td>
+	    <td><img src=imagenes/0.JPG id="43a" alt="0" onclick="evento("43")"/></td>
+	    <td><img src=imagenes/0.JPG id="44a" alt="0" onclick="evento("44")"/></td>
+	    <td><img src=imagenes/0.JPG id="45a" alt="0" onclick="evento("45")"/></td>
+	    <td><img src=imagenes/0.JPG id="46a" alt="0" onclick="evento("46")"/></td>
+	    <td><img src=imagenes/0.JPG id="47a" alt="0" onclick="evento("47")"/></td>
+	    <td><img src=imagenes/0.JPG id="48a" alt="0" onclick="evento("48")"/></td>
+	</tr>
+	<tr>
+	    <td><img src=imagenes/0.JPG id="49a" alt="0" onclick="evento("49")"/></td>
+	    <td><img src=imagenes/0.JPG id="50a" alt="0" onclick="evento("50")"/></td>
+	    <td><img src=imagenes/0.JPG id="51a" alt="0" onclick="evento("51")"/></td>
+	    <td><img src=imagenes/0.JPG id="52a" alt="0" onclick="evento("52")"/></td>
+	    <td><img src=imagenes/0.JPG id="53a" alt="0" onclick="evento("53")"/></td>
+	    <td><img src=imagenes/0.JPG id="54a" alt="0" onclick="evento("54")"/></td>
+	    <td><img src=imagenes/0.JPG id="55a" alt="0" onclick="evento("55")"/></td>
+	    <td><img src=imagenes/0.JPG id="56a" alt="0" onclick="evento("56")"/></td>
+	</tr>
+	<tr>
+	    <td><img src=imagenes/0.JPG id="57a" alt="0" onclick="evento("57")"/></td>
+	    <td><img src=imagenes/0.JPG id="58a" alt="0" onclick="evento("58")"/></td>
+	    <td><img src=imagenes/0.JPG id="59a" alt="0" onclick="evento("59")"/></td>
+	    <td><img src=imagenes/0.JPG id="60a" alt="0" onclick="evento("60")"/></td>
+	    <td><img src=imagenes/0.JPG id="61a" alt="0" onclick="evento("61")"/></td>
+	    <td><img src=imagenes/0.JPG id="62a" alt="0" onclick="evento("62")"/></td>
+	    <td><img src=imagenes/0.JPG id="63a" alt="0" onclick="evento("63")"/></td>
+	    <td><img src=imagenes/0.JPG id="64a" alt="0" onclick="evento("64")"/></td>
+	</tr>
+	</table>
+	</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+	
+
+	
